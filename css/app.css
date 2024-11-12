@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*GLOBAL STYLES*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+}
+
+:root {
+	--ex-dark: #002E22;
+	--ex-light: #03D47C;
+}
+
+div.window {
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	overflow-y: scroll;
+	padding: 1rem;
+}
+
+div.loader {
+	background: var(--ex-dark);
+	align-content: center;
+}
+
+div.container {
+	margin: 0 auto;
+	width: 1200px;
+	max-width: 95%;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.hide {
+	display: none !important;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+hr.v-separator {
+	height: 3px;
+	background: black;
+	margin-bottom: 10px;
+}
+
+a {
+	color: var(--ex-light);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+button {
+	border: 0;
+	outline: 0;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	color: var(--ex-dark);
+	padding: 0.5rem 2.5rem;
+	background: var(--ex-light);
+	border: 2px solid var(--ex-dark);
+}
+
+button#logoutLink, button.danger {
+	color: white;
+	background: #F44336;
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	padding: 0.5rem 1.5rem;
+	border: 2px solid darkred;
+	line-height: 1.2rem;
+}
+
+button#addNew {
+	color: var(--ex-dark);
+	background: var(--ex-light);
+	border: 2px solid var(--ex-dark);
+	padding: 0.5rem 1rem;
+	display: inline-block;
+}
+
+button.primary, button.secondary {
+	color: var(--ex-dark);
+	background: var(--ex-light);
+	border: 2px solid var(--ex-dark);
+}
+
+button.secondary {
+	background: white;
+}
+
+/*LOGIN FORM*/
+
+div.login {
+	background: var(--ex-dark);
+	align-content: center;
+}
+
+div.login p {
+	color: white;
+	text-align: center;
+}
+
+div.login div.container > img {
+	display: block;
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+div.login form {
+	width: 90%;
+	max-width: 400px;
+	margin: 5rem auto;
+	background: var(--ex-light);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+div.login form h2 {
+	font-size: 2rem;
+	font-weight: bolder;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+div.login form * {
+	color: var(--ex-dark);
+}
+
+div.login form input, div.login form input, div.login form button  {
+	padding: 0.5rem 1rem;
+	margin: 0.5rem 0;
+	width: 100%;
+	border-radius: 0.5rem;
+	border: 2px solid var(--ex-dark);
+}
+
+div.login form button:disabled {
+	background: gray;
+}
+
+div.login div#err {
+	color: red;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/*DASHBOARD*/
+
+div.dashboard {
+	background: whitesmoke;
+}
+
+div.dashboard div#overlay {
+	z-index: 10;
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(155, 155, 155, 0.5);
+	backdrop-filter: blur(15px);
+	align-content: center;
+}
+
+div.dashboard div#overlay div#modal {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 500px;
+	padding: 2rem;
+	min-height: 5rem;
+	border: 4px solid var(--ex-dark);
+	border-radius: 0.5rem;
+	background: whitesmoke;
+	text-align: center;
+}
+
+div.dashboard div#overlay div#modal h3 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+div.dashboard div#overlay div#modal * {
+	color: var(--ex-dark);
+}
+
+div.dashboard div#overlay div#modal button#close-window {
+	display: block;
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	color: black;
+	background: red;
+	padding: 0.2rem 0.4rem;
+}
+
+div.dashboard div.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+div.dashboard > div.container > div.header > div {
+	align-content: center;
+}
+
+div.dashboard > div.transactions {
+	display: grid;
+	grid-template-columns: 33% 66%;
+	gap: 1%;
+}
+
+div.dashboard > div.transactions > div {
+	display: inline-block;
+	max-height: 780px;
+	overflow-y: scroll;
+}
+
+/*DASHBOARD - FILTERS*/
+
+div.dashboard div.section {
+	width: 100%;
+	border-top: 3px solid var(--ex-dark);
+	padding: 10px 5px;
+	margin-bottom: 1rem;
+	background: rgba(3, 212, 124, 0.1);
+}
+
+div.dashboard div.filters form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1rem;
+}
+
+div.dashboard form div.field {
+	flex: 1;
+	display: flex;
+	margin: 1rem 0;
+	align-content: baseline;
+	gap: 1rem;
+}
+
+div.dashboard form div.field.long {
+	flex: 2;
+}
+
+div.dashboard form div.field.search {
+	flex: 2;
+}
+
+div.dashboard form div.field > div {
+	flex: 1;
+	align-content: baseline;
+}
+
+div.dashboard form div.field > div.long {
+	flex: 2;
+}
+
+div.dashboard form div.field input, div.dashboard form div.field select {
+	padding: 0.5rem 1rem;
+	border: 2px solid var(--ex-dark);
+	border-radius: 0.5rem;
+	outline: 0;
+	display: inline-block;
+	width: 100%;
+}
+
+div.dashboard form div.field label {
+	padding: 0.5rem 0;
+}
+
+div.dashboard form div.field input[type="checkbox"] {
+	width: auto;
+}
+
+div.dashboard form div.field.search i.fa {
+	padding: 1.2rem;
+ 	margin-left: -3.5rem;
+}
+
+/*DASHBOARD - TRANSACTION TABLE*/
+div.dashboard table {
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid var(--ex-dark);
+	border-top: 0;
+}
+
+div.dashboard table tbody tr td, div.dashboard table thead tr th {
+	max-width: 210px;
+	overflow-wrap: break-word;
+	border: 1px solid var(--ex-dark);
+	border-top: 0;
+	border-bottom: 0;
+	border-spacing: 0px;
+	text-align: left;
+	padding: 0.5rem 1rem;
+}
+
+div.dashboard table tbody tr:hover {
+	background: rgba(3, 212, 124, 0.1);
+}
+
+div.dashboard table thead tr th {
+	border: 1px solid var(--ex-dark);
+	border-top: 2px solid var(--ex-dark);
+	border-bottom: 2px solid var(--ex-dark);
+	background: var(--ex-light);
+	color: var(--ex-dark);
+	padding: 1.5rem 1rem;
+}
+
