@@ -13,6 +13,5 @@
 				onclick="handle_login()">Submit
 			</button>
 		</form>
-		<p>Do not have an Accout? <a href="/register" target="_blank">Sign up now</a></p>
 	</div>
 </div>
